@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatroom</title>
+    <link rel="stylesheet" href='styles/main.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class='sidebar'>
+      <div class='sidebar-content'>
+        Matthew
+      </div>
+    </div>
+    <div class='messages' id='messages'>
+
+    </div>
+    <div class='chat'>
+      <form id='chat-form'>
+        <input id='msg' placeholder="Send message" autocomplete="off">
+      </form>
+    </div>
+
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='scripts/main.js'></script>
+  </body>
+</html>

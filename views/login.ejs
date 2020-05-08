@@ -1,0 +1,13 @@
+<%- include('templates/header.ejs') %>
+
+<div class='login'>
+  <h2>Login</h2>
+  <form action="/login" method="POST">
+    <input placeholder="Username" name="username">
+    <input type="password" placeholder="Password" name="password">
+    <button type="submit">Submit</button>
+  </form>
+  <div>Don't have an account? Register <a href="/register">here</a></div>
+</div>
+
+<%- include('templates/footer.ejs') %>

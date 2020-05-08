@@ -1,0 +1,25 @@
+<%- include('templates/header.ejs') %>
+
+<div class='sidebar'>
+  <div class='sidebar-content'>
+    <% for (chat of chats) { %>
+      <a href='/chat/<%= chat.id %>' class='sidebar-item no-decoration'>
+        <%= chat.name %>
+      </a>
+    <% } %>
+  </div>
+</div>
+<div class='messages' id='messages'>
+
+</div>
+<div class='chat'>
+  <form id='chat-form'>
+    <input id='msg' placeholder="Send message" autocomplete="off">
+  </form>
+</div>
+
+<script src='/socket.io/socket.io.js'></script>
+<script src='/scripts/main.js'></script>
+  
+
+<%- include('templates/footer.ejs') %>

@@ -1,9 +1,13 @@
 <%- include('templates/header.ejs') %>
 
 <div class='sidebar'>
+  <div class='sidebar-profile'>
+    <%= currentUser.username %>
+    <a href='/logout' class='logout'>Logout</a>
+  </div>
   <div class='sidebar-content'>
     <% for (chat of chats) { %>
-      <a href='/chat/<%= chat.id %>' class='sidebar-item no-decoration'>
+    <a href='/chat/<%= chat.id %>' class='sidebar-item no-decoration <% if (chatId == chat.id) { %> current-chat <% } %>'>
         <%= chat.name %>
       </a>
     <% } %>

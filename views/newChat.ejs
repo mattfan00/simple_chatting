@@ -1,0 +1,11 @@
+<%- include('templates/header.ejs') %>
+
+<div class='login'>
+  <h2>New Chat</h2>
+  <form action="/chat" method="POST">
+    <input name="name" placeholder="ex. CSGO fan club">
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<%- include('templates/footer.ejs') %>

@@ -16,15 +16,28 @@ chatForm.addEventListener('submit', (e) => {
   e.preventDefault()
 
   msg = e.target.elements.msg
-  socket.emit('chat message', {chatId, value: msg.value})
+  console.log(currentUser)
+  const message = {
+    user: currentUser,
+    chatId,
+    value: msg.value
+  }
+  socket.emit('chat message', message)
   msg.value = ''
 })
 
 function outputMessage(msg) {
   var div = document.createElement('div')
+  console.log(msg)
   div.innerHTML = `
     <div class='message'>
-      ${msg}
+      <div class='message-info'>
+        <h4>${msg.user}</h4>
+        <div>${msg.time}</div>
+      </div>
+      <div class='message-body'>
+        ${msg.value}
+      </div>
     </div>`
   messages.appendChild(div)
 }

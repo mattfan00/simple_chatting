@@ -32,6 +32,23 @@ html, body {
   border-bottom: .5px solid #e0e0e0;
 }
 
+.sidebar-addChat {
+  margin-top: 15px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-addChat a {
+  text-align: center;
+  font-size: 0.75em;
+  padding: 7px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+}
+
 .logout {
   font-size: .5em;
 }
@@ -61,6 +78,20 @@ html, body {
 
 .message {
   margin-bottom: 20px;
+}
+
+.message-info {
+  display: flex;
+  align-items: baseline;
+}
+
+.message-info h4 {
+  margin: 5px 0;
+  margin-right: 7px;
+}
+
+.message-info div {
+  font-size: .75em;
 }
 
 .chat {

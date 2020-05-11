@@ -4,10 +4,13 @@
   <div class='sidebar-profile'>
     <%= currentUser.username %>
     <a href='/logout' class='logout'>Logout</a>
+    <div class='sidebar-addChat'>
+      <a href='/chat/new' class='no-decoration'>New Chat</a>
+    </div>
   </div>
   <div class='sidebar-content'>
     <% for (chat of chats) { %>
-    <a href='/chat/<%= chat.id %>' class='sidebar-item no-decoration <% if (chatId == chat.id) { %> current-chat <% } %>'>
+    <a href='/chat/<%= chat._id %>' class='sidebar-item no-decoration <% if (chatId == chat._id) { %> current-chat <% } %>'>
         <%= chat.name %>
       </a>
     <% } %>
@@ -22,6 +25,7 @@
   </form>
 </div>
 
+<script>const currentUser = "<%= currentUser.username %>"</script>
 <script src='/socket.io/socket.io.js'></script>
 <script src='/scripts/main.js'></script>
   
